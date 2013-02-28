@@ -1,0 +1,899 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR  DISCARDABLE     "res\\cursor1.cur"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Surface.ico"
+IDR_SURFACTYPE          ICON    DISCARDABLE     "res\\SurfaceDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Surface...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Surface"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Surface Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2003",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_SURFACE_FORM DIALOG DISCARDABLE  0, 0, 696, 409
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_OPTION DIALOGEX 0, 0, 282, 452
+STYLE DS_SETFOREGROUND | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Stop Simulation",IDC_CANCEL,13,15,64,14
+    PUSHBUTTON      "Begin Simulation",IDC_BEGIN,13,30,64,14
+    LTEXT           "Cell Number",IDC_CurRaftNumber,16,238,39,8
+    EDITTEXT        IDC_EDIT_CurRaftNumber,101,235,36,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Ag Number",IDC_Cur_Ag_Number,16,266,36,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Cur_Ag_Number,101,263,36,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_VISIBLE
+    LTEXT           "Simulation Duration (m)",IDC_Simulation_Duration,14,282,
+                    73,8
+    EDITTEXT        IDC_EDIT_Simulation_Duration,100,279,47,12,
+                    ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Dynamic parameters",IDC_DINAMIC,8,209,237,107
+    LTEXT           "INF Receptors Number",IDC_REC_NUM,16,252,74,8
+    EDITTEXT        IDC_EDIT_REC_NUM,101,248,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Current Step Number",IDC_STEP,13,296,66,8
+    EDITTEXT        IDC_EDITD_STEP,100,295,47,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Step Number",IDC_STEPS,16,359,43,8
+    EDITTEXT        IDC_EDITD_STEPS,66,359,50,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Run simulation in backgroung (yes/no)",IDC_DRAW,101,62,
+                    137,40
+    LTEXT           "Update screen every",IDC_PROBABILITY2,18,65,69,8
+    LTEXT           "step/s",IDC_TimerInitialisator,30,91,23,8
+    EDITTEXT        IDC_EDIT_TimerInitialisator,65,89,25,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE | WS_GROUP
+    LTEXT           "Zoom",IDC_Dffusion_Coefficient_from_Raft2,185,20,19,8
+    EDITTEXT        IDC_EDIT_ZOOM,212,19,25,12,ES_AUTOHSCROLL
+    GROUPBOX        "Static parameters",IDC_STATIC,7,335,274,49
+    LTEXT           "Static",IDC_STATIC_GRID_SZ,176,354,41,8
+    LTEXT           "In calculation",IDC_STATIC_GRID_SZ2,179,364,42,8
+    PUSHBUTTON      "Next Step",IDC_NEXT_STEP,97,29,63,14
+    CONTROL         "Step by step",IDC_CHECK_STEP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,98,17,61,9
+    GROUPBOX        "",IDC_STATIC,7,10,75,39
+    GROUPBOX        "",IDC_STATIC,92,10,73,39
+    COMBOBOX        IDC_COMBO_ZOOM,212,33,26,42,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Region",IDC_Dffusion_Coefficient_from_Raft3,184,34,24,8
+    GROUPBOX        "Surface Navigator",IDC_STATIC,178,8,69,41
+    LTEXT           "Grid Size :",IDC_STEPS2,129,354,35,8
+    LTEXT           "Viewable area :",IDC_STEPS3,128,364,50,8
+    GROUPBOX        "",IDC_STATIC,121,348,106,27
+    CONTROL         "Rec. ID",IDC_CHEK_Draw_Indexes,"Button",BS_AUTOCHECKBOX | 
+                    NOT WS_VISIBLE | WS_TABSTOP,150,145,44,8
+    EDITTEXT        IDC_EDIT_Win_Update_Timer,29,76,26,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    GROUPBOX        "",IDC_STATIC,7,54,241,52
+    CONTROL         "Show Signaling Molecules name",IDC_CHEK_Draw_SM_names,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,178,120,8
+    CONTROL         "Show Receptors",IDC_CHEK_Draw_Rec,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,150,125,74,8
+    CONTROL         "Show Signaling Molecules",IDC_CHEK_Draw_SM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,165,100,8,0,
+                    HIDC_CHEK_Draw_SM
+    CONTROL         "msg/prot",IDC_CHEK_Draw_Ag_Indexes,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,171,189,57,8
+    CONTROL         "show RIGI/IFNb ",IDC_CHEK_Draw_Ag,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,172,177,70,8
+    CONTROL         "S.M.ID",IDC_CHEK_Draw_SM_Ind,"Button",BS_AUTOCHECKBOX | 
+                    NOT WS_VISIBLE | WS_TABSTOP,15,188,38,8
+    CONTROL         "Show Cells",IDC_CHEK_Draw_Raft,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,124,79,8
+    CONTROL         "Show Cell Names",IDC_CHEK_Draw_Raft_Ind,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,137,79,8
+    CONTROL         "Hapten. ID",IDC_CHEK_Draw_Ht_Indexes,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,205,161,46,
+                    8
+    CONTROL         "Show Receptor Names",IDC_CHEK_Draw_Names,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,150,136,92,8
+END
+
+IDD_RESULT DIALOG DISCARDABLE  0, 0, 231, 408
+STYLE DS_SETFOREGROUND | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Free receptor",IDC_STATIC_freeBCR,59,21,67,12,NOT 
+                    WS_VISIBLE
+    LTEXT           "One ""arm"" bound receptor",IDC_STATIC_1armBCR,60,49,
+                    109,18,NOT WS_VISIBLE
+    LTEXT           "One ""arm"" bound activated receptor ",
+                    IDC_STATIC__1arm_A_BCR,58,79,138,24,NOT WS_VISIBLE
+    LTEXT           "Two ""arms"" bound receptor ",IDC_STATIC_2armBCR,59,113,
+                    152,15,NOT WS_VISIBLE
+    LTEXT           "Two ""arms"" bound activated receptor ",
+                    IDC_STATIC__2arm_A_BCR,56,138,152,25,NOT WS_VISIBLE
+    LTEXT           "Inactive Lyn",IDC_STATIC_SM,64,186,96,12,NOT WS_VISIBLE
+    LTEXT           "Active Fyn",IDC_STATIC_A_SM,64,256,145,17,NOT 
+                    WS_VISIBLE
+    LTEXT           "Ligand",IDC_STATIC_Ligand,65,298,32,12,NOT WS_VISIBLE
+    GROUPBOX        "",IDC_STATIC,11,7,204,162
+    GROUPBOX        "",IDC_STATIC,13,173,204,103
+    GROUPBOX        "",IDC_STATIC,13,280,204,40
+    ICON            IDI_ICON3,IDC_STATIC,23,42,20,20,NOT WS_VISIBLE | 
+                    WS_BORDER
+    ICON            IDI_ICON1,IDC_STATIC,23,15,20,20,NOT WS_VISIBLE | 
+                    WS_BORDER
+    ICON            IDI_ICON8,IDC_STATIC,24,249,20,20,NOT WS_VISIBLE | 
+                    WS_BORDER
+    ICON            IDI_ICON4,IDC_STATIC,23,72,20,20,NOT WS_VISIBLE | 
+                    WS_BORDER
+    ICON            IDI_ICON5,IDC_STATIC,24,106,20,20,NOT WS_VISIBLE | 
+                    WS_BORDER
+    ICON            IDI_ICON6,IDC_STATIC,24,137,20,20,NOT WS_VISIBLE | 
+                    WS_BORDER
+    ICON            IDI_ICON7,IDC_STATIC,24,179,20,20,NOT WS_VISIBLE | 
+                    WS_BORDER
+    ICON            IDI_ICON10,IDC_STATIC,24,203,20,20,NOT WS_VISIBLE | 
+                    WS_BORDER
+    ICON            IDI_ICON9,IDC_STATIC,24,226,20,20,NOT WS_VISIBLE | 
+                    WS_BORDER
+    ICON            IDI_ICON11,IDC_STATIC,155,292,20,20,NOT WS_VISIBLE | 
+                    WS_BORDER
+    LTEXT           "Raft",IDC_STATIC_Raft,184,298,20,12,NOT WS_VISIBLE
+    ICON            IDI_ICON2,IDC_STATIC,26,292,20,20,NOT WS_VISIBLE | 
+                    WS_BORDER
+    LTEXT           "Active Lyn",IDC_STATIC_ActiveLyn,64,210,96,12,NOT 
+                    WS_VISIBLE
+    LTEXT           "Inactive Fyn",IDC_STATIC_InactiveFyn,64,230,96,12,NOT 
+                    WS_VISIBLE
+END
+
+IDD_ORDERS DIALOG DISCARDABLE  0, 0, 278, 451
+STYLE DS_SETFOREGROUND | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "P Snt-SNAP25 Dis.",IDC_Ppob_SynSNAP25_Dis,13,255,74,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Ppob_SynSNAP25_Dis,100,251,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "Dcell",IDC_Diffusion_Coefficient,14,405,20,8
+    EDITTEXT        IDC_EDIT_Diffusion_Coefficient,49,403,24,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "D Vamp",IDC_STATIC_D_Vamp,94,357,31,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Vamp_D,145,355,26,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "TypeI-R - INFb Dif. rate (maximum 1)",
+                    IDC_Dffusion_Coefficient_from_Raft,13,322,115,8
+    EDITTEXT        IDC_EDIT_Stx_D,133,321,26,12,ES_AUTOHSCROLL
+    GROUPBOX        "",IDC_STATIC,8,8,258,136,NOT WS_VISIBLE
+    LTEXT           "P Snt_bind_SNAP25",IDC_Ppob_Snt_bind_SNAP25,13,185,71,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Ppob_Snt_bind_SNAP25,100,184,26,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "P Snt-SNAP25 bind Vamp",IDC_Ppob_Snt_SNAP25_bind_Vamp,
+                    13,199,85,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Ppob_Snt_SNAP25_bind_Vamp,100,198,26,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "INFb Dif. rate (maximum 1)",IDC_R_Prob_to_Bind_AG,14,
+                    346,88,8
+    EDITTEXT        IDC_EDIT_Snap25_D,133,348,26,12,ES_AUTOHSCROLL
+    LTEXT           "P Snt-SNAP25-Vamp Dis.",
+                    IDC_Ppob_Snt_SNAP25_Vamp_Dissociation,13,228,85,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Ppob_SynSNAP25VAMP_Dis,100,225,26,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "P SNAR bind Alpha",IDC_Ppob_SntSNAP25Vamp_BindAlpha,12,
+                    213,84,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Ppob_SynSNAPVamp_BindAlpha,100,211,26,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "P SNAR-SNAP Dis.",IDC_Ppob_Snt_SNAP25VampAlpha_Dis,13,
+                    241,81,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Ppob_SntSNAP25VampAlpha_Dis,100,238,26,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "P NSF ",IDC_P_NSF_on_Snt_Snap,14,384,26,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_P_NSF_on_Snt_Snap,56,381,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    PUSHBUTTON      "OK",IDC_OK,67,425,56,14
+    PUSHBUTTON      "Cancel",IDC_CANCEL,146,426,53,14
+    EDITTEXT        IDC_EDIT_StepsNumber,232,404,28,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "step#",IDC_STATIC_StepsNumber,205,405,19,8,NOT 
+                    WS_VISIBLE
+    LTEXT           "D NSF",IDC_STATIC_D_ESF,13,356,29,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_D_ESF,55,353,26,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "Raft#",IDC_STATIC_Raft_number,74,405,22,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Raft_number,96,403,19,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "init Snt Number",IDC_STATIC_initStxNumber,14,16,59,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initStxNumber,91,14,29,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "init SNAP25 Number",IDC_STATIC_initSNAP25Number,14,29,
+                    71,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initSNAP25Number,91,26,29,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "init NSF Number",IDC_STATIC_initNSFNumber,14,41,63,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initNSFNumber,91,39,29,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "infection stage",IDC_STATIC_initVampNumber3,14,54,61,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initVampNumber,91,52,30,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "Stx Pin_raft",IDC_STATIC_StxPin_raft,13,150,41,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_StxPout_raft,146,149,25,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "SNAP Pin_raft",IDC_STATIC_SNAP25Pin_raft,13,164,49,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_SNAP25Pout_raft,146,162,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "Vamp Pin_raft",IDC_STATIC_VampPin_raft,178,150,53,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_VampPout_raft,235,162,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "Stx Pout_raft",IDC_STATIC_StxPout_raft,91,149,45,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_StxPin_raft,64,149,23,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "SNAP Pout_raft",IDC_STATIC_SNAP25Pout_raft,91,163,51,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_SNAP25Pin_raft,64,162,24,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "Vamp Pout_raft",IDC_STATIC_VampPout_raft,178,164,57,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_VampPin_raft,235,149,26,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    GROUPBOX        "",IDC_STATIC,9,142,256,36,NOT WS_VISIBLE
+    GROUPBOX        "",IDC_STATIC,8,319,258,79,NOT WS_VISIBLE
+    LTEXT           "init Snt InRaft Fraction",IDC_STATIC_initStxInRaftFract,
+                    128,16,75,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initStxInRaftFract,227,14,29,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "init SNAP InRaft Fraction",
+                    IDC_STATIC_initSNAP25InRaftFract,127,28,80,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initSNAP25InRaftFract,227,26,29,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "init NSF InRaft Fraction",IDC_STATIC_initNSFInRaftFract,
+                    128,41,73,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initNSFInRaftFract,227,39,29,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "Cells fraction infected (maximum 1)",
+                    IDC_STATIC_initVampInRaftFract,128,54,90,8
+    EDITTEXT        IDC_EDIT_initVampInRaftFract,227,52,30,12,ES_AUTOHSCROLL
+    GROUPBOX        "",IDC_STATIC,7,177,258,143,NOT WS_VISIBLE
+    GROUPBOX        "",IDC_STATIC,10,396,255,24,NOT WS_VISIBLE
+    LTEXT           "Snt-SNAP25 Pin_raft",IDC_Snt_SNAP25_Pin_raft,134,186,71,
+                    8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Snt_SNAP25_Pin_raft,232,184,26,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "Snt-SNAP25-Vamp Pin_raft",IDC_Snt_SNAP25_Vamp_Pin_raft,
+                    134,199,88,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Snt_SNAP25_Vamp_Pin_raft,232,198,26,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "SNAR-SNAP Pin_raft",IDC_SntSNAP25_Vamp_Alpha_Pin_raft,
+                    133,213,96,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_SntSNAP_VampAlpha_Pin_raft,232,211,26,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "Snt-SNAP25 Pout_raft",IDC_Snt_SNAP25_Pout_raft2,134,253,
+                    71,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Snt_SNAP25_Pout_raft,232,251,26,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "Snt-SNAP-Vamp Pout_raft",IDC_Snt_SNAP25_Vamp_Pout_raft2,
+                    134,266,87,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Snt_SNAP25_Vamp_Pout_raft,232,265,27,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "SNAR-SNAP Pout_raft",IDC_SntSNAP25_VampAlpha_Pout_raft,
+                    134,280,85,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_SntSNAP_VampAlpha_Pout_raft,232,278,26,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "raft size",IDC_STATIC_Raft_size,135,404,27,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_MeanRaftSize,163,403,23,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "D Vamp in raft",IDC_STATIC_D_Vamp2,94,371,49,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Vamp_D_inRaft,146,368,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "TypeI-R Dif. rate (maximum 1)",
+                    IDC_Dffusion_Coefficient_from_Raft4,13,334,94,8
+    EDITTEXT        IDC_EDIT_Stx_D_inRaft,133,335,26,12,ES_AUTOHSCROLL
+    LTEXT           "D Snap in raft",IDC_R_Prob_to_Bind_AG2,96,365,46,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Snap25_D_inRaft,167,369,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "init Snt-Snap Num",IDC_STATIC_initVampNumber4,14,81,66,
+                    8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initSnt_Snap25Number,91,78,30,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "init SntSnap InRaft Fract",
+                    IDC_STATIC_initVampInRaftFract2,128,80,84,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initSnt_Snap25InRaftFract,227,79,30,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "init Snt-Snap-Vamp Number",IDC_STATIC_initVampNumber5,
+                    14,95,63,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initSnt_Snap25VampNumber,91,91,30,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "init SntSnapVamp InRaft FracVamp InRaft ",
+                    IDC_STATIC_initVampInRaftFract3,128,95,85,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initSnt_Snap25VampInRaftFract,227,91,30,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "init SNAR-SNAP Number",IDC_STATIC_initVampNumber6,14,
+                    107,74,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initSnt_Snap25VampAlphaNum,91,104,30,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "init SNAR-SNAP InRaft FracVamp InRaft ",
+                    IDC_STATIC_initVampInRaftFract4,128,106,96,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initSnt_Snap25VampAlphaInRaftFract,227,104,30,
+                    12,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "D Alpha",IDC_STATIC_D_ESF3,14,370,29,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_D_Alpha,55,367,26,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "LifeTime NSF",IDC_STATIC_LifeTime_NSF,182,327,47,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_LifeTime_NSF,234,325,26,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "LifeTime Alpha",IDC_STATIC_LifeTime_Alpha,182,341,49,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_LifeTime_Alpha,234,339,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    CONTROL         "NSF to remove compl.",IDC_CHECK_NSFtoRemoveCompl,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,92,383,83,
+                    9
+    LTEXT           "P Snt_bind_Snt",IDC_Ppob_Snt_bind_Snt,14,267,71,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Ppob_Snt_bind_Snt,100,264,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "P Snt-Snt Dis.",IDC_Ppob_SntSnt_Dis,14,293,74,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Ppob_SntSnt_Dis,100,290,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "P SntSnt_bind_Snt",IDC_Ppob_SntSnt_bind_Snt,14,280,71,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Ppob_SntSnt_bind_Snt,100,277,26,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "P Snt-Snt-Snt Dis.",IDC_Ppob_SntSntSnt_Dis,13,307,74,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Ppob_SntSntSnt_Dis,100,304,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "Snt-Snt Pin_raft",IDC_SntSnt_Pin_raft,134,225,96,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_SntSnt_Pin_raft,232,224,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "Snt-Snt-Snt Pin_raft",IDC_SntSntSnt_Pin_raft,134,238,96,
+                    8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_SntSntSnt_Pin_raft,232,237,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "SntSnt Pout_raft",IDC_SntSnt_Pout_raft,134,293,85,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_SntSnt_Pout_raft,232,291,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "SntSntSnt Pout_raft",IDC_SntSntSnt_Pout_raft,134,306,85,
+                    8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_SntSntSnt_Pout_raft,232,304,26,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "init SntSnt Number",IDC_STATIC_initSntSntNum,13,119,59,
+                    8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initSntSntNum,91,117,29,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "init SntSnt InRaft Fraction",
+                    IDC_STATIC_initSntSntInRaftFract,128,119,75,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initSntSntInRaftFract,227,116,29,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "init SntSntSnt Number",IDC_STATIC_initSntSntSntNum,13,
+                    131,71,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initSntSntSntNum,91,129,29,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "init SntSntSnt InRaft Fraction",
+                    IDC_STATIC_initSntSntInRaftFract2,127,131,75,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initSntSntSnt_InRaftFract,227,129,29,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "init Alpha Number",IDC_STATIC_initAlphaNum,13,67,61,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initAlphaNum,91,65,30,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "init Alpha InRaft Fraction",
+                    IDC_STATIC_initAlphaInRaftFract,127,67,77,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_initAlphaInRaftFract,227,65,30,12,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "Ptransloc Alpha",IDC_STATIC_Ptransloc_Alpha,182,356,49,
+                    8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Ptransloc_Alpha,234,355,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    LTEXT           "Ptransloc NSF",IDC_STATIC_Ptransloc_NSF,182,370,49,8,
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_Ptransloc_NSF,234,369,26,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+END
+
+IDD_DLG_BASE DIALOG DISCARDABLE  400, 0, 299, 478
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab2",IDC_TAB,"SysTabControl32",0x0,7,7,263,462
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Surface MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Surface\0"
+            VALUE "LegalCopyright", "Copyright (C) 2003\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Surface.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Surface Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SURFACE_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 670
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 408
+    END
+
+    IDD_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 451
+    END
+
+    IDD_RESULT, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 226
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 407
+    END
+
+    IDD_ORDERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 450
+    END
+
+    IDD_DLG_BASE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 469
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "RIGI mediated DC response to viral infection\n\nSurfac\n\n\nSurface.Document\nSurfac Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Surface"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Unknown language: 0xD, 0x1 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_HEB)
+#ifdef _WIN32
+LANGUAGE 0xD, 0x1
+#pragma code_page(1255)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON2               ICON    DISCARDABLE     "res\\backbone.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\whiteCircle.ico"
+IDI_ICON3               ICON    DISCARDABLE     "res\\redCircle.ico"
+IDI_ICON4               ICON    DISCARDABLE     "res\\cianCircle.ico"
+IDI_ICON5               ICON    DISCARDABLE     "res\\yellowCircle.ico"
+IDI_ICON6               ICON    DISCARDABLE     "res\\purpleCircle.ico"
+IDI_ICON7               ICON    DISCARDABLE     "res\\greySquare.ico"
+IDI_ICON8               ICON    DISCARDABLE     "res\\greenSquare.ico"
+IDI_ICON9               ICON    DISCARDABLE     "res\\roseSquare.ico"
+IDI_ICON10              ICON    DISCARDABLE     "res\\blackSquare.ico"
+IDI_ICON11              ICON    DISCARDABLE     "res\\raft.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Surface.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Unknown language: 0xD, 0x1 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Surface.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,4 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by Surface.rc
+//
+#define HIDC_CHEK_Draw_SM               0x80820428    // IDD_OPTION [English (U.S.)]
